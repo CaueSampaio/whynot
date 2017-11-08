@@ -1,6 +1,6 @@
 codeNetwork.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/home/feed");
 
     $stateProvider
     .state('login', {
@@ -19,24 +19,8 @@ codeNetwork.config(function($stateProvider, $urlRouterProvider) {
         url: '/feed',
         templateUrl: "templates/feed.html"   
     })
-    .state('home.profile', {
-        url: '/profile',
-        templateUrl: "templates/profile.html"
-    })
-    .state('home.edit', {
-        url: '/editprofile',
-        templateUrl: "templates/profile-edit.html"
-    })
-    .state('home.friends', {
-        url: '/friends',
-        templateUrl: "templates/friends.html"
-    })
-    .state('home.groups', {
-        url: '/groups',
-        templateUrl: "templates/groups.html"
-    })
-    .state('home.group', {
-        url: '/group',
-        templateUrl: "templates/group.html"
+    .state('home.tenologies', {
+        url: '/tecnologies',
+        templateUrl: "templates/tecnologies.html"   
     })
 })
