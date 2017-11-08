@@ -1,0 +1,35 @@
+<!-- <div class="post-area" layout-align="center center" md-whiteframe="4">
+    <textarea name="post" rows="9"></textarea>
+</div> -->
+
+<md-card>
+    <md-card-header>
+        <md-card-header-text>
+            <md-input-container class="no-margin" flex="50" layout="row" layout-align="start end">
+                <label>Titulo</label>
+                <input required>
+                <div ng-messages="projectForm.clientName.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+        </md-card-header-text>
+        <div class="title" layout="row" layout-align="start end">
+            <md-input-container class="no-margin">
+                <label>Techies</label>
+                <md-select ng-model="selectedToppings" multiple>
+                    <md-optgroup label="Techies">
+                        <md-option>Javascript</md-option>
+                        <md-option>HTML</md-option>
+                    </md-optgroup>
+                </md-select>
+            </md-input-container>
+            <md-button class="no-margin">Enviar</md-button>
+        </div>
+    </md-card-header>
+    <md-content>
+        <md-input-container layout="row" flex="100">
+            <textarea name="post" rows="5" placeholder="Detone esta técnologia!"></textarea>
+        </md-input-container>
+
+    </md-content>
+</md-card>

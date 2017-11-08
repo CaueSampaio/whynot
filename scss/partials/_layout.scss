@@ -1,0 +1,14 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondaryColor;
+    height: 100vh;
+    color: rgba(0,0,0,0.4);
+    padding-top: 125px;
+}
+
+.container {
+    width: 66%;
+    margin: 0 auto;
+}

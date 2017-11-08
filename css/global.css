@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,700,900");
+* {
+  font-family: 'Raleway', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+h2 {
+  font-size: 32px; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+textarea {
+  width: 100%; }
+
+.form {
+  margin-top: 35px; }
+
+ul {
+  list-style: none; }
+
+.material-icons {
+  margin: 0 10px; }
+
+.avatar {
+  margin-right: 5px; }
+
+.page-title {
+  margin: 10px 0 30px 30px; }
+
+.margin-top {
+  margin-top: 15px; }
+
+.no-margin {
+  margin: 0; }
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffb6b1;
+  height: 100vh;
+  color: rgba(0, 0, 0, 0.4);
+  padding-top: 125px; }
+
+.container {
+  width: 66%;
+  margin: 0 auto; }
+
+.toolbar {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px; }
+
+.tool-left p {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline; }
+  .tool-left p a {
+    color: #fff; }
+
+.md-sidenav-left {
+  width: 250px;
+  height: 100vh; }
+
+.sidenav-menu button {
+  background-color: #fff;
+  padding: 15px;
+  width: 100%;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .sidenav-menu button:hover {
+    background-color: #ffb6b1; }
+
+.search-form {
+  margin-left: 45px; }
+  .search-form i {
+    position: relative;
+    top: 5px;
+    right: 5px; }
+
+.post {
+  margin: 40px 0; }
+
+.post-top {
+  background-color: #ffb6b1; }
+
+.post-comments {
+  background-color: #ebebeb; }
+
+.post-comment {
+  background-color: #ebebeb; }
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden; }
+  .avatar.-big {
+    width: 95px;
+    height: 95px; }
+
+/*# sourceMappingURL=global.css.map */

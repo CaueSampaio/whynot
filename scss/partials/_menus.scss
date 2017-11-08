@@ -1,0 +1,42 @@
+.toolbar {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.tool-left {
+    p {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        a {
+            color: #fff;
+        }
+    }
+    
+}
+
+.md-sidenav-left {
+    width: 250px;
+    height: 100vh;
+}
+
+.sidenav-menu {
+    button {
+        background-color: #fff;
+        padding: 15px;
+        width: 100%;
+        border: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+            background-color: $secondaryColor;
+        }
+    }
+}
