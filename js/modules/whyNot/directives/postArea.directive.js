@@ -1,4 +1,5 @@
-codeNetwork.directive('postArea', function () {
+// codeNetwork.directive('postArea', function () {
+whyNotApp.directive('postArea', function () {
     return {
         templateUrl: 'templates/post-area.html'
     }

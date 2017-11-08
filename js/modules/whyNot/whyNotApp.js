@@ -1,1 +1,5 @@
-var whyNotApp = angular.module("whyNotCtrl", ["ui.route", "ngMaterial"]);
+var whyNotApp = angular.module("whyNotApp", ["ui.router", "ngMaterial"]);
+
+whyNotApp.config(function($locationProvider) {
+    $locationProvider.hashPrefix('');
+});
