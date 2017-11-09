@@ -26,11 +26,6 @@ whyNotApp.controller("feedCtrl", [ "$scope", "$rootScope", "pub",
         //     for(let i = 0; i < $scope.pubList.length; i++)
         //         $scope.pubList[i].postedDate = $scope.pubDate;
         // });
-<<<<<<< HEAD
-=======
-
-        // $scope.pubDate()
->>>>>>> 4aff5ec9e6dd2b1e6f80f0ab1f3dc64bc5b53472
 
         $scope.postPub = function (publication) {
             if($rootScope.user.logado != false)
