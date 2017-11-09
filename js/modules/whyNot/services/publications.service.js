@@ -18,7 +18,7 @@ whyNotApp.factory("pub", function ($http) {
         $http.post("", comment)
             .then()
             .catch(function () {
-                response = "Erro na postagem do comentário!"
+                var response = "Erro na postagem do comentário!"
             })
 
         return response;

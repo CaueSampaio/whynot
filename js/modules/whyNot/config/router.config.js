@@ -17,7 +17,8 @@ whyNotApp.config(function($stateProvider, $urlRouterProvider) {
     })
     .state('home.feed', {
         url: '/feed',
-        templateUrl: "templates/feed.html"   
+        templateUrl: "templates/feed.html",  
+        controller: "feedCtrl"
     })
     .state('home.tenologies', {
         url: '/tecnologies',

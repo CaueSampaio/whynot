@@ -1,4 +1,4 @@
-whyNotApp.controller("feedCtrl", [ "$scope", "$rootcope", "pub", 
+whyNotApp.controller("feedCtrl", [ "$scope", "$rootScope", "pub", 
     function ($scope, $rootScope, pub) {
 
         pub.query().then( promisse => {
@@ -30,5 +30,6 @@ whyNotApp.controller("feedCtrl", [ "$scope", "$rootcope", "pub",
         }
 
         console.log($rootScope.user)
+        
     }
 ])
