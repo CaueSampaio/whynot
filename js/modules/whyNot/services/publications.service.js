@@ -10,8 +10,6 @@ whyNotApp.factory("pub", function ($http) {
             }).catch(function () {
                 response = "Erro na postagem da publicação!"
             })
-
-        return response;
     }
 
     var _comment = function (comment, response) {
@@ -20,8 +18,6 @@ whyNotApp.factory("pub", function ($http) {
             .catch(function () {
                 var response = "Erro na postagem do comentário!"
             })
-
-        return response;
     }
 
     var _reaction = function (reaction, response) {
@@ -32,8 +28,12 @@ whyNotApp.factory("pub", function ($http) {
             }) 
     }
 
-    var _search = function (reaction, response) {
-        $http.post("", reaction)
+    var _search = function (search, response) {
+        $http.post("", search)
+            .then()
+            .catch(function () {
+                response = "Erro ao realizar pesquisa!"
+            })
     }
 
     return {

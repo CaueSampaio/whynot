@@ -1,35 +1,51 @@
 whyNotApp.controller("feedCtrl", [ "$scope", "$rootScope", "pub", 
     function ($scope, $rootScope, pub) {
 
-        pub.query().then( promisse => {
-            $scope.pubList = promisse.data;
-        });
+        $scope.responsePub = ""
+        $scope.responseComment = ""
+        $scope.responseReaction = ""
+        $scope.responseSearch = ""
 
         $scope.pubDate = function () {
-            var date = $scope.pubList.date;
+            var date = new Date($scope.pubList.date);
+            var currentDate = new Date (Date.now());
+            var pubDate = currentDate - date;
+
+            if(currentDate.getHours() >= 1 )
+                var postedDate = currentDate.getYear() + 'h';
+            else    
+                var postedDate = 'agora';
+            
+            return postedDate;
         }
 
+        pub.query().then( promisse => {
+            for(let i = 0; i < promisse.data.length; i++)
+                $scope.pubList.push(promisse.data[i]);
+
+            for(let i = 0; i < $scope.pubList.length; i++)
+                $scope.pubList[i].postedDate = $scope.pubDate;
+        });
+
+        $scope.pubDate()
+
         $scope.postPub = function (publication) {
-            $scope.responsePub = pub.postPub(publication)
+            if($rootScope.user.logado != false)
+                pub.postPub(publication, $scope.responsePub)
         }
 
         $scope.postComment = function (comment) {
-            // var response = pub.postComment(comment);
-            // if(response != "")
-            //     $scope.responseComment = response;
-
-            $scope.responseComment = pub.postComment(comment);
+            if($rootScope.user.logado != false)
+                pub.postComment(comment, $scope.responseComment);
         }
 
         $scope.postReaction = function (reaction) {
-            // var response = pub.postReaction(reaction);
-            // if(response != "")
-            //     $scope.responseReaction = response;
-
-            $scope.responseReaction = pub.postReaction(reaction);
+            if($rootScope.user.logado != false)
+                pub.postReaction(reaction, $scope.responseReaction);
         }
 
-        console.log($rootScope.user)
-        
+        $scope.postSearch = function (search) {
+            pub.postReaction(search, $scope.responseSearch);
+        }
     }
 ])
