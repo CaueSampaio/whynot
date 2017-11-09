@@ -34,10 +34,12 @@
     <div class="post-content" layout-padding>
         <h3>Titulo postagem</h3>
         <p>Texto da postagem inicial</p>
-        <div class="like-area" layout="row" layout-align="left center">
-            <i class="material-icons">whatshot</i> 123
-            <i class="material-icons">ac_unit</i> 122
-            <i class="material-icons">face</i>
+        <div>
+            <ul layout="row" class="like-area">
+                <li layout="row" layout-align="center center" ng-click="activeIcon(1)" ng-class="{'-active' : isActive(1)}"><i class="material-icons" >whatshot</i>123</li>
+                <li layout="row" layout-align="center center" ng-click="activeIcon(2)" ng-class="{'-active' : isActive(2)}"><i class="material-icons" >ac_unit</i> 122</li>
+                <li><i class="material-icons">face</i></li>
+            </ul>
         </div>
 
     </div>

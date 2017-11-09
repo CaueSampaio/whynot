@@ -12,3 +12,12 @@
 .post-comment {
     background-color: rgb(235, 235, 235);
 }
+
+
+.like-area {
+    li{
+        &.-active {
+            color: $red; 
+        }
+    }
+}

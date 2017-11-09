@@ -79,6 +79,9 @@ md-toolbar {
 .post-comment {
   background-color: #ebebeb; }
 
+.like-area li.-active {
+  color: #f44336; }
+
 .avatar {
   width: 55px;
   height: 55px;
