@@ -5,7 +5,8 @@ whyNotApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('login', {
         url: '/login',
-        templateUrl: "templates/login.html"
+        templateUrl: "templates/login.html",
+        controller: "loginCtrl"
     })
     .state('register', {
         url: '/register',

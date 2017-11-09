@@ -12,8 +12,9 @@
     </div>
     <div class="nav-menu" layout="row" layout-align="center center">
         <a ui-sref="home.tenologies">Técnologias</a>
-        <a ui-sref="login">Login</a>
-        <a ui-sref="register">Cadastrar</a>
+        <a ui-sref="login" ng-hide="user.logged">Login</a>
+        <a ui-sref="register" ng-hide="user.logged">Cadastrar</a>
+        <a ng-show="user.logged">Sair</a>
     </div>
 </md-toolbar>
 <div class="content" layout="row">

@@ -1,10 +1,10 @@
 whyNotApp.run(function ($rootScope) {
     $rootScope.user = {
-        nome: "",
+        name: "",
         email: "",
-        profissao: "",
-        foto: "",
-        logado: false
+        prof: "",
+        picture: "",
+        logged: false
     }
 
 })
