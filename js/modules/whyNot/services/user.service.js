@@ -4,7 +4,7 @@ whyNotApp.factory("user", function ($http) {
     }
 
     var _newUser = function (user, response) {
-        $http.post("", user)
+        $http.post(baseUrl + "/user", user)
         .then()
         .catch(function () {
             response = "Erro na operação de cadastro!"

@@ -6,30 +6,36 @@ whyNotApp.controller("feedCtrl", [ "$scope", "$rootScope", "pub",
         $scope.responsePub = ""
         $scope.responseSearch = ""
 
-        // $scope.pubDate = function () {
-        //     var date = new Date($scope.pubList.date);
-        //     var currentDate = new Date (Date.now());
-        //     var pubDate = currentDate - date;
+        $scope.pubDate = function () {
+            var date = new Date($scope.pubList.date);
+            var currentDate = new Date (Date.now());
+            var pubDate = currentDate - date;
 
-        //     if(currentDate.getHours() >= 1 )
-        //         var postedDate = currentDate.getYear() + 'h';
-        //     else    
-        //         var postedDate = 'agora';
+            if(currentDate.getHours() >= 1 )
+                var postedDate = currentDate.getYear() + 'h';
+            else    
+                var postedDate = 'agora';
             
-        //     return postedDate;
-        // }
+            return postedDate;
+        }
 
-        // pub.query().then( promisse => {
-        //     for(let i = 0; i < promisse.data.length; i++)
-        //         $scope.pubList.push(promisse.data[i]);
+        pub.query().then( promisse => {
+            console.log(promisse.data[0])
+            $scope.pubList = promisse.data;
+            console.log($scope.pubList);
+            // for(let i = 0; i < promisse.data.length; i++)
+            //     $scope.pubList.push(promisse.data[i]);
 
-        //     for(let i = 0; i < $scope.pubList.length; i++)
-        //         $scope.pubList[i].postedDate = $scope.pubDate;
-        // });
+            //     console.log($scope.pubList)
 
-        $scope.postPub = function (publication) {
+            for(let i = 0; i < $scope.pubList.length; i++)
+                $scope.pubList[i].postedDate = $scope.pubDate;
+            console.log($scope.pubList)
+        });
+
+        $scope.postPub = function () {
             if($rootScope.user.logado != false)
-                pub.postPub(publication, $scope.responsePub)
+                pub.postPub($scope.pub, $scope.responsePub)
         }
 
         $scope.postSearch = function (search) {
