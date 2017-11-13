@@ -18,12 +18,22 @@
                 <label>Techies</label>
                 <md-select ng-model="selectedToppings" ng-model="pub.techies" multiple>
                     <md-optgroup label="Techies" >
-                        <md-option>Javascript</md-option>
-                        <md-option>HTML</md-option>
+                        <md-option value="Javascript">Javascript</md-option>
+                        <md-option value="HTML">HTML</md-option>
+                        <md-option value="TS">TypeScript</md-option>
+                        <md-option value="PHP">PHP</md-option>
+                        <md-option value="Python">Python</md-option>
+                        <md-option value="C">C</md-option>
+                        <md-option value="Java">Java</md-option>
+                        <md-option value="CSS">CSS</md-option>
+                        <md-option value="SASS">SASS</md-option>
+                        <md-option value="LESS">LESS</md-option>
+                        <md-option value="JQuery">JQuery</md-option>
+                        <md-option value="Angular">Angular</md-option>
                     </md-optgroup>
                 </md-select>
             </md-input-container>
-            <md-button ng-click="postPub()" class="no-margin">Enviar</md-button>
+            <md-button class="md-raised md-primary" ng-click="postPub()">&nbsp Comment &nbsp</md-button>
         </div>
     </md-card-header>
     <md-content>

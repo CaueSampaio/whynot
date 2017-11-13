@@ -1,5 +1,7 @@
 whyNotApp.factory("pub", function ($http) {
     var _publicationsList = function () {
+
+
         return $http.get(baseUrl + "/publication/publications")
                     .then()
                     .catch(function(error) {
@@ -8,8 +10,7 @@ whyNotApp.factory("pub", function ($http) {
     }
 
     var _publication = function (publication, response) {
-        
-        $http.post(baseUrl + "/publication", publication)
+        $http.post(baseUrl + "/publication", "Ola")
             .then(function () {
                 response = "Publicação postada com sucesso!"
             }).catch(function () {

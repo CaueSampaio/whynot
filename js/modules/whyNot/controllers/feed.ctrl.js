@@ -1,11 +1,5 @@
 whyNotApp.controller("feedCtrl", [ "$scope", "$rootScope", "pub", 
     function ($scope, $rootScope, pub) {
-
-        console.log($rootScope.user)
-
-        $scope.responsePub = ""
-        $scope.responseSearch = ""
-
         $scope.pubDate = function () {
             var date = new Date($scope.pubList.date);
             var currentDate = new Date (Date.now());

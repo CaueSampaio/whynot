@@ -7,4 +7,6 @@ whyNotApp.run(function ($rootScope) {
         logged: false
     }
 
+    console.log($rootScope.user)
+
 })

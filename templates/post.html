@@ -16,7 +16,7 @@
             </md-card-header-text>
             <div layout="column">
                 <span>Pontos: {{post.Points}}</span>
-                <span>Posted: 1 day</span>
+                <span>Postado: 1 dia atras</span>
             </div>
 
         </md-card-header>
@@ -33,9 +33,8 @@
         <p>{{post.Description}}</p>
         <div>
             <ul layout="row" class="like-area">
-                <li layout="row" layout-align="center center" ng-click="activeIcon(1)" ng-class="{'-active' : isActive(1)}"><i class="material-icons" >whatshot</i>123</li>
-                <li layout="row" layout-align="center center" ng-click="activeIcon(2)" ng-class="{'-active' : isActive(2)}"><i class="material-icons" >ac_unit</i> 122</li>
-                <li><i class="material-icons">face</i></li>
+                <li layout="row" layout-align="center center" ng-click="activeIcon(1)" ng-class="{'-active' : isActive(1)}"><i class="material-icons" >whatshot</i></li>
+                <li layout="row" layout-align="center center" ng-click="activeIcon(2)" ng-class="{'-active' : isActive(2)}"><i class="material-icons" >ac_unit</i></li>
             </ul>
         </div>
 
@@ -59,7 +58,7 @@
         <md-input-container layout="row" flex layout-align="start end">
             <img src="https://lh3.googleusercontent.com/-ccUXue8amts/AAAAAAAAAAI/AAAAAAAAAAA/ANQ0kf7tDweCD8gC3eMqG4om8aNvzjsDnQ/s96-c-mo/photo.jpg"
                 alt="Avatar" class="avatar">
-            <input type="text">
+            <input type="text"  aria-label="Comente">
         </md-input-container>
         <md-button class="md-raised md-primary">&nbsp Comment &nbsp</md-button>
     </div>

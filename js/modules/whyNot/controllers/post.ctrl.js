@@ -1,5 +1,5 @@
 whyNotApp.controller("postCtrl", [ "$scope",
-    function ($scope) {
+    function ($scope, $rootScope) {
 
         $scope.responseComment = ""
         $scope.responseReaction = ""
@@ -17,7 +17,7 @@ whyNotApp.controller("postCtrl", [ "$scope",
                 if(icon == 1)
                     reaction = true
                 else
-                    recation = false
+                    reaction = false
                     
                 pub.postReaction(reaction, $scope.responseReaction);
             }
@@ -32,7 +32,7 @@ whyNotApp.controller("postCtrl", [ "$scope",
 
         $scope.activeIcon = function(icon) {
             $scope.reaction = icon
-            postReaction(icon)
+            $scope.postReaction(icon)
         }
     }
 
